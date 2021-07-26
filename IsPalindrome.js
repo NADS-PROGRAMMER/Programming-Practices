@@ -29,8 +29,8 @@ const isPalindrome = string => {
 }
 
 // TEST CASES
-console.log(`is racecar palindrome? -> ${isPalindrome('racecar')}`);
-console.log(`is mom palindrome? -> ${isPalindrome('mom')}`);
-console.log(`is tell palindrome? -> ${isPalindrome('tell')}`);
-console.log(`is LOL palindrome? -> ${isPalindrome('LOL')}`);
-console.log(`is empty string palindrome? -> ${isPalindrome('')}`);
+console.log(`is racecar palindrome? -> ${isPalindrome('racecar')}`); // True
+console.log(`is mom palindrome? -> ${isPalindrome('mom')}`); // True
+console.log(`is tell palindrome? -> ${isPalindrome('tell')}`); // False
+console.log(`is LOL palindrome? -> ${isPalindrome('LOL')}`); // True
+console.log(`is empty string palindrome? -> ${isPalindrome('')}`); // True
