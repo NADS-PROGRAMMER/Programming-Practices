@@ -29,6 +29,7 @@ $secondary: #fdfbf9;
 html {
   background: $primary;
   overflow-x: hidden;
+  font-size: 14px;
 }
 
 // Main division
@@ -106,6 +107,7 @@ html {
       align-self: flex-start;
       padding: 1rem;
       width: 30%;
+      transition: background 300ms;
     }
     button:hover {
       background: black;
@@ -189,7 +191,11 @@ footer {
     @include titleSize(2.5rem);
   }
 }
+
 @media only screen and (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
   .main {
     width: 70vw;
     @include titleSize(2.5rem);

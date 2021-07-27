@@ -1,6 +1,5 @@
 "use strict";
 
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // Event for the dropdown menu for countries.
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     // Event for the dropdown menu for courses.
-
     document.querySelector('#course').addEventListener('change', function() {
 
         let otherCourseField = document.querySelector('.other-course');
