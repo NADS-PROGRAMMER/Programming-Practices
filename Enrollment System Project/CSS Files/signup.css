@@ -64,12 +64,12 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   width: 70%;
+  margin-bottom: 1rem;
 }
 
 .form-section .form-content input {
   width: 100%;
   padding: 0.5rem;
-  margin-bottom: 1rem;
   background: #14171a;
   border: none;
   outline: none;
@@ -77,6 +77,12 @@ html {
   color: white;
   -webkit-transition: border-bottom 400ms;
   transition: border-bottom 400ms;
+}
+
+.form-section .form-content .error-message {
+  color: #d21c38;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }
 
 .form-section .form-content input:focus {
