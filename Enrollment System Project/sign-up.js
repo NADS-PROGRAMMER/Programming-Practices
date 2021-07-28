@@ -1,5 +1,7 @@
 "use strict";
 
+import Student  from "./Modules/student.js";
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Event for the dropdown menu for countries.
@@ -38,3 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
             otherCourseField.style.display = 'none';
     });
 });
+
+function isAllFilledUp() {
+
+
+    
+}
