@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Event for button.
-
     document.querySelector('button').addEventListener('click', () => {
 
         if (!isAllFilledUp())
@@ -68,6 +67,7 @@ function isAllFilledUp() {
     let inputFields = document.querySelectorAll('.input-field');
     let isFilledUp = true;
 
+    // Traverse all the elements.
     inputFields.forEach(inputField => {
 
         if (!(String(inputField.value))) {
