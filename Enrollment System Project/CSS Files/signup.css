@@ -164,6 +164,9 @@ html {
     width: 100%;
     height: 100vh;
   }
+  .form-section .section-title h1 {
+    font-size: 2.5rem;
+  }
   .form-section .form-content * {
     font-size: 1.2rem;
   }
