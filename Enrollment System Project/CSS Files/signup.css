@@ -6,7 +6,9 @@
   font-family: Poppins;
 }
 
-html {
+@-webkit-keyframes errorMessageAnimation {}
+
+@keyframes errorMessageAnimation {}html {
   overflow-x: hidden;
   background: #171717;
 }
@@ -80,6 +82,7 @@ html {
 }
 
 .form-section .form-content .error-message {
+  display: none;
   color: #d21c38;
   font-size: 0.8rem;
   margin-top: 0.2rem;

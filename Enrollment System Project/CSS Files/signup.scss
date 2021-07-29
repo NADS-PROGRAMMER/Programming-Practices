@@ -5,6 +5,9 @@
   font-family: Poppins;
 }
 
+@keyframes errorMessageAnimation {
+}
+
 $primary: #171717;
 $secondary: #00acee;
 $tertiary: #14171a;
@@ -65,10 +68,12 @@ html {
     }
 
     .error-message {
+      display: none;
       color: $dangerColor;
       font-size: 0.8rem;
       margin-top: 0.2rem;
     }
+
     input:focus {
       border-bottom: 2px solid $sixth;
     }
