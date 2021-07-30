@@ -1,11 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: Poppins;
-}
-
 @-webkit-keyframes errorMessageAnimation {
   from {
     border-width: 0;
@@ -30,6 +22,32 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes errorMessage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Poppins;
+}
+
+@keyframes errorMessageAnimation {
+  from {
+    border-width: 0;
+  }
+  to {
+    border-width: auto;
   }
 }
 
@@ -104,9 +122,6 @@ html {
 }
 
 .form-section .form-content input {
-  background: url("/Programming-Practices/Enrollment System Project/Images/checked.png");
-  background-size: contain;
-  background-position: 10px 10px;
   width: 100%;
   padding: 0.5rem;
   background: #14171a;

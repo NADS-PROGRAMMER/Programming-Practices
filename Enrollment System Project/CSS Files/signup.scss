@@ -1,3 +1,5 @@
+@import "config";
+
 * {
   margin: 0;
   padding: 0;
@@ -73,17 +75,7 @@ html {
     margin-bottom: 1rem;
 
     input {
-      background: url("\/Programming-Practices\/Enrollment System Project\/Images\/checked.png");
-      background-size: contain;
-      background-position: 10px 10px;
-      width: 100%;
-      padding: 0.5rem;
-      background: $tertiary;
-      border: none;
-      outline: none;
-      border-bottom: 2px solid $fourth;
-      color: white;
-      transition: border-bottom 400ms;
+      @include inputStyles();
     }
 
     .error-message {
@@ -94,7 +86,7 @@ html {
     }
 
     input:focus {
-      border-bottom: 2px solid $sixth;
+      @include inputFocusStyles();
     }
 
     ::-webkit-calendar-picker-indicator {
@@ -102,18 +94,11 @@ html {
     }
 
     button:hover {
-      background: $buttonHoverColor;
+      @include buttonHoverStyle();
     }
 
     button {
-      width: 7rem;
-      margin: 1rem 0;
-      padding: 0.5rem;
-      background: $secondary;
-      border: none;
-      border: 1px solid $sixth;
-      color: white;
-      border-radius: 30px;
+      @include buttonStyles();
     }
   }
 }

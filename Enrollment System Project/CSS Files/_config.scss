@@ -1,0 +1,73 @@
+@keyframes errorMessageAnimation {
+  from {
+    border-width: 0;
+  }
+
+  to {
+    border-width: auto;
+  }
+}
+
+@keyframes errorMessage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+$primary: #171717;
+$secondary: #00acee;
+$tertiary: #14171a;
+$fourth: #657786;
+$fifth: #aabbc2;
+$sixth: #ffffff;
+$buttonHoverColor: #1a8dc2;
+$dangerColor: #d21c38;
+// END OF VARIABLES AND KEYFRAMES ANIMATIONS.
+
+@mixin inputStyles() {
+  width: 100%;
+  padding: 0.5rem;
+  background: $tertiary;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid $fourth;
+  color: white;
+  transition: border-bottom 400ms;
+}
+
+@mixin inputFocusStyles() {
+  border-bottom: 2px solid $sixth;
+}
+
+@mixin buttonStyles() {
+  width: 7rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background: $secondary;
+  border: none;
+  border: 1px solid $sixth;
+  color: white;
+  border-radius: 30px;
+}
+
+@mixin buttonHoverStyle() {
+  background: $buttonHoverColor;
+}
+
+@mixin displayFlex($direction, $alignItems, $justifyContent) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin mainAbsoluteStyles() {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

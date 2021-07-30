@@ -1,0 +1,148 @@
+@import "config";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+html {
+  overflow-x: hidden;
+  background: $primary;
+}
+
+.main {
+  @include displayFlex(column, center, center);
+  height: 100vh;
+}
+
+.image-section {
+  @include displayFlex(none, center, center);
+  img {
+    width: 4rem;
+  }
+}
+
+// FORM STYLES.
+form {
+  @include displayFlex(column, center, center);
+  background: $primary;
+  width: 100%;
+  padding: 2rem 0;
+  // End of style of FORM.
+
+  * {
+    color: $sixth;
+  }
+
+  // TITLE SECTION STYLE.
+  .section-title {
+    margin: 1rem 0;
+    h1 {
+      text-align: center;
+    }
+  } // End of TITLE SECTION style.
+
+  // THE REST OF THE SECTION STYLES.
+  section {
+    @include displayFlex(column, none, center);
+    width: 70%;
+    margin-bottom: 1rem;
+    input {
+      @include inputStyles();
+    }
+
+    input:focus {
+      @include inputFocusStyles();
+    }
+
+    button {
+      @include buttonStyles();
+    }
+    button:hover {
+      @include buttonHoverStyle();
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media only screen and (min-width: 576px) {
+  .image-section {
+    img {
+      width: 5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    @include mainAbsoluteStyles();
+    width: 30rem;
+  }
+  .image-section {
+    img {
+      width: 6rem;
+    }
+  }
+  .section-title {
+    font-size: 1.2rem;
+  }
+  form {
+    section {
+      label,
+      input,
+      button {
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main {
+    @include mainAbsoluteStyles();
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main {
+    @include mainAbsoluteStyles();
+    width: 45rem;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  form {
+    width: 80%;
+    section {
+      button {
+        width: 10rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .main {
+    width: 45rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+  form {
+    width: 80%;
+
+    section {
+      button {
+        width: 10rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
