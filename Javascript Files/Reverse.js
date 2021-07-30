@@ -21,10 +21,7 @@ function reverse(arr, index, lastIndex) {
         return;
 
     reverse(arr, index + 1, lastIndex - 1);
-    let temp = arr[lastIndex];
-    arr[lastIndex] = arr[index];
-    arr[index] = temp;
-    
+    [arr[index], arr[lastIndex]] = [arr[lastIndex], arr[index]];
 }
 
 reverse(arr, 0, arr.length - 1);

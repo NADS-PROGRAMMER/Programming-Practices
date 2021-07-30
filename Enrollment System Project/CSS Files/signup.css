@@ -6,9 +6,43 @@
   font-family: Poppins;
 }
 
-@-webkit-keyframes errorMessageAnimation {}
+@-webkit-keyframes errorMessageAnimation {
+  from {
+    border-width: 0;
+  }
+  to {
+    border-width: auto;
+  }
+}
 
-@keyframes errorMessageAnimation {}html {
+@keyframes errorMessageAnimation {
+  from {
+    border-width: 0;
+  }
+  to {
+    border-width: auto;
+  }
+}
+
+@-webkit-keyframes errorMessage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes errorMessage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
   overflow-x: hidden;
   background: #171717;
 }
@@ -70,6 +104,9 @@
 }
 
 .form-section .form-content input {
+  background: url("/Programming-Practices/Enrollment System Project/Images/checked.png");
+  background-size: contain;
+  background-position: 10px 10px;
   width: 100%;
   padding: 0.5rem;
   background: #14171a;
@@ -128,16 +165,20 @@
   padding: 0.5rem;
 }
 
+.image-section section * {
+  color: #ffffff;
+  text-shadow: 5px 5px #171717;
+}
+
 .image-section section h1 {
   text-align: center;
   font-size: 3rem;
-  color: #ffffff;
 }
 
 .image-section section p {
-  color: #ffffff;
   text-align: center;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 @media only screen and (min-width: 768px) {

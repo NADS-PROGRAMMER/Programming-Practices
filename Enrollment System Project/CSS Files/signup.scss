@@ -6,8 +6,23 @@
 }
 
 @keyframes errorMessageAnimation {
+  from {
+    border-width: 0;
+  }
+
+  to {
+    border-width: auto;
+  }
 }
 
+@keyframes errorMessage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 $primary: #171717;
 $secondary: #00acee;
 $tertiary: #14171a;
@@ -56,7 +71,11 @@ html {
     justify-content: center;
     width: 70%;
     margin-bottom: 1rem;
+
     input {
+      background: url("\/Programming-Practices\/Enrollment System Project\/Images\/checked.png");
+      background-size: contain;
+      background-position: 10px 10px;
       width: 100%;
       padding: 0.5rem;
       background: $tertiary;
@@ -109,15 +128,18 @@ html {
   padding: 0.5rem;
 
   section {
+    * {
+      color: $sixth;
+      text-shadow: 5px 5px $primary;
+    }
     h1 {
       text-align: center;
       font-size: 3rem;
-      color: $sixth;
     }
     p {
-      color: $sixth;
       text-align: center;
       font-size: 1.2rem;
+      font-weight: 600;
     }
   }
 }

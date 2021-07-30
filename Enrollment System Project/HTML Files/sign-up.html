@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Programming-Practices/Enrollment System Project/CSS Files/signup.css">
-    <script type="module" src="/Programming-Practices/Enrollment System Project/sign-up.js"></script>
+    <script type="module" src="/Programming-Practices/Enrollment System Project/Modules/sign-up.js"></script>
     <title>Sign Up</title>
 </head>
 <body>
     <div class="main">
 
-        <div class="form-section">
+        <form action="sign-up.html" class="form-section" id="sign-up">
             
             <section class="section-title">
                 <h1>Sign Up</h1>
@@ -19,7 +19,7 @@
 
             <section class="form-content">
                 <label for="first-name">First Name</label>
-                <input class="input-field" type="text" name="" id="first-name" placeholder="First Name">
+                <input class="input-field" type="text" name="" id="first-name" placeholder="First Name" required>
                 <p class="error-message">Please provide your first name here.</p>
             </section>
             
@@ -56,7 +56,7 @@
             <section class="form-content">
                 <button>Sign Up</button>
             </section>
-        </div>
+        </form>
 
         <div class="image-section">
             <section>
