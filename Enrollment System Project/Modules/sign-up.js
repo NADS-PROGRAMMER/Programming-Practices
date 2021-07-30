@@ -1,8 +1,6 @@
 "use strict";
 
-import Student  from "./student.js";
-
-let enrolledStudent = [];
+let newStudent = {};
 
 function addInputEvents() {
 
@@ -33,14 +31,16 @@ function addInputEvents() {
 
 function getData() {
 
-    let info = [];
-    let inputFields = document.querySelectorAll('.input-field');
+    newStudent = {
 
-    inputFields.forEach(input => {
-
-        console.log(input.value);
-    })
+        firstName: document.querySelector('#first-name').value,
+        middleName: document.querySelector('#middle-name').value,
+        lastName: document.querySelector('#last-name').value,
+        birthdate: document.querySelector('#date-of-birth').value,
+        country: document.querySelector('#country').value,
+    }
 }
+
 document.addEventListener('DOMContentLoaded', () => {
 
     addInputEvents();
@@ -48,5 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('button').addEventListener('click', () => {
 
         getData();
+        
+        return false;
     })
 });
