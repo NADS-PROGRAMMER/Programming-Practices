@@ -80,11 +80,15 @@ function isEmailExist(thisEmail) {
 
     let enrolledStudent = JSON.parse(localStorage.getItem('enrolledStudent'));
 
-    for (let student of enrolledStudent) {
+    if (enrolledStudent !== undefined && enrolledStudent !== null) {
+
+        for (let student of enrolledStudent) {
 
         if (student['studentEmail'] === String(thisEmail)) 
             return true;
+        }
     }
+    
     return false;
 }
 
@@ -106,4 +110,3 @@ function onInputStyles(element) {
     element.nextElementSibling.style.animation = 'errorMessageDisappearing 300ms';
     element.nextElementSibling.style.display = 'none';
 }
-console.log(JSON.parse(localStorage.getItem('enrolledStudent')));

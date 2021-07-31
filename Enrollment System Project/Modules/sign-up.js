@@ -1,6 +1,5 @@
 "use strict";
 
-
 function addInputEvents() {
 
     let inputFields = document.querySelectorAll('.input-field');
@@ -30,7 +29,7 @@ function addInputEvents() {
 
 function getData() {
 
-    return {
+   return {
 
         firstName: document.querySelector('#first-name').value,
         middleName: document.querySelector('#middle-name').value,
@@ -40,14 +39,19 @@ function getData() {
     }
 }
 
+function clear() {
+
+    let inputs = document.querySelectorAll('.input-field');
+
+    inputs.forEach(input => input.value = '');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
     addInputEvents();
 
-    document.querySelector('button').addEventListener('click', () => {
+    document.querySelector('#sign-up').addEventListener('submit', () => {
 
-        // Set to session storage for passing the data to another page.
         sessionStorage.setItem('newStudent', JSON.stringify(getData()));
-        return false;
     })
 });
