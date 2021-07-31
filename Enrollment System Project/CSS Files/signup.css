@@ -151,6 +151,7 @@ html {
 
 .form-section .form-content button:hover {
   background: #1a8dc2;
+  cursor: pointer;
 }
 
 .form-section .form-content button {

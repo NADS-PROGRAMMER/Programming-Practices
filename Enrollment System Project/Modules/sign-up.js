@@ -1,6 +1,5 @@
 "use strict";
 
-let newStudent = {};
 
 function addInputEvents() {
 
@@ -31,7 +30,7 @@ function addInputEvents() {
 
 function getData() {
 
-    newStudent = {
+    let newStudent = {
 
         firstName: document.querySelector('#first-name').value,
         middleName: document.querySelector('#middle-name').value,
@@ -48,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('button').addEventListener('click', () => {
 
         getData();
-        
+        sessionStorage.setItem('newStudent', JSON.stringify(newStudent));
         return false;
     })
 });

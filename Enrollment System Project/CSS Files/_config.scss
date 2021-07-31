@@ -55,6 +55,7 @@ $dangerColor: #d21c38;
 
 @mixin buttonHoverStyle() {
   background: $buttonHoverColor;
+  cursor: pointer;
 }
 
 @mixin displayFlex($direction, $alignItems, $justifyContent) {
@@ -65,9 +66,8 @@ $dangerColor: #d21c38;
 }
 
 @mixin mainAbsoluteStyles() {
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

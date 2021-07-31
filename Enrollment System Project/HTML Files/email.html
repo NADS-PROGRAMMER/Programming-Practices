@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Programming-Practices/Enrollment System Project/CSS Files/email.css">
+    <script src="/Programming-Practices/Enrollment System Project/Modules/email.js"></script>
     <title>Email</title>
 </head>
 <body>
@@ -21,21 +22,32 @@
             <section>
                 <label for="">Email</label>
                 <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <small class="error-message"></small>
             </section>
         
             <section>
                 <label for="">Create Password</label>
                 <input type="password" name="password" id="password" placeholder="Create password" required>
+                <small class="error-message"></small>
             </section>
         
             <section>
                 <label for="">Confirm Password</label>
                 <input type="password" name="confirm-pass" id="confirm-pass" placeholder="Confirm password" required>
+                <small class="error-message"></small>
             </section>
-            <section>
+            <section class="button-section">
                 <button type="submit">Create</button>
             </section>
+            <section class="agreement-section">
+            
+                <section>
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <small>I accept the <a href="">Terms</a> and <a href="">Privacy</a> of YGO Programming Center.</small>
+                </section>
+            </section>
         </form>
+        
     </div>
     
 </body>

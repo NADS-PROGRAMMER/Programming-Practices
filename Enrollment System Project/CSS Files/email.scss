@@ -63,6 +63,34 @@ form {
       @include buttonHoverStyle();
     }
   }
+
+  // Overrides the general style of sections
+  .button-section {
+    margin-bottom: 0rem;
+  }
+
+  // Overrides the general style of sections.
+  .agreement-section {
+    @include displayFlex(column, center, center);
+    width: 100%;
+    section {
+      @include displayFlex(row, center, space-evently);
+      font-size: 1.2rem;
+      input {
+        width: auto;
+        margin-right: 1rem;
+        transform: scale(1.1);
+      }
+      small {
+        width: 100%;
+        text-align: justify;
+        a {
+          text-decoration: none;
+          color: $secondary;
+        }
+      }
+    }
+  }
 }
 
 // MEDIA QUERIES
