@@ -51,16 +51,24 @@ form {
     input {
       @include inputStyles();
     }
-
+    .error-message {
+      margin-bottom: 0.5rem;
+      color: $dangerColor;
+    }
     input:focus {
       @include inputFocusStyles();
     }
 
     button {
       @include buttonStyles();
+      margin-top: 0;
     }
     button:hover {
       @include buttonHoverStyle();
+    }
+
+    button:disabled {
+      background: $buttonHoverColor;
     }
   }
 

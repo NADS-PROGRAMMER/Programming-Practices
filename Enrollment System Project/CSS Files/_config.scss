@@ -17,6 +17,15 @@
   }
 }
 
+@keyframes errorMessageDisappearing {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 $primary: #171717;
 $secondary: #00acee;
 $tertiary: #14171a;

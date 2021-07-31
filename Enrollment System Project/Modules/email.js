@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isEmailExist(email.value)) {
 
             setErrorStyles(email, 'Email does exist.');
-            return;
         }
 
         // Checks if the password and the confirmed password is matched/correct.
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         else {
 
             setErrorStyles(confirmedPassword, 'Confirmed password does not match. Kindly check it.');
-            return;
         }
             
         

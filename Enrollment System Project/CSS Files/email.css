@@ -34,6 +34,24 @@
   }
 }
 
+@-webkit-keyframes errorMessageDisappearing {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes errorMessageDisappearing {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -145,6 +163,11 @@ form section input {
   transition: border-bottom 400ms;
 }
 
+form section .error-message {
+  margin-bottom: 0.5rem;
+  color: #d21c38;
+}
+
 form section input:focus {
   border-bottom: 2px solid #ffffff;
 }
@@ -158,11 +181,16 @@ form section button {
   border: 1px solid #ffffff;
   color: white;
   border-radius: 30px;
+  margin-top: 0;
 }
 
 form section button:hover {
   background: #1a8dc2;
   cursor: pointer;
+}
+
+form section button:disabled {
+  background: #1a8dc2;
 }
 
 form .button-section {
