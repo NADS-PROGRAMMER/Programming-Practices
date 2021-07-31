@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    let form = document.querySelector('#email-form');
     let button = document.querySelector('button');
     let checkbox = document.querySelector('#checkbox');
 
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.disabled = true;
     })
 
-    button.addEventListener('click', () => {
+    form.addEventListener('submit', () => {
 
         // Get the password and confirmed passwords.
         const email = document.querySelector('#email');
