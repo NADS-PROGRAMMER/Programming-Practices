@@ -30,7 +30,7 @@ function addInputEvents() {
 
 function getData() {
 
-    let newStudent = {
+    return {
 
         firstName: document.querySelector('#first-name').value,
         middleName: document.querySelector('#middle-name').value,
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('button').addEventListener('click', () => {
 
-        getData();
-        sessionStorage.setItem('newStudent', JSON.stringify(newStudent));
+        // Set to session storage for passing the data to another page.
+        sessionStorage.setItem('newStudent', JSON.stringify(getData()));
         return false;
     })
 });
