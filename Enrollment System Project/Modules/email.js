@@ -12,24 +12,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (checkbox.checked)
             button.disabled = false;
-        else 
+        else
             button.disabled = true;
     })
 
     button.addEventListener('click', () => {
 
-        let newStudent = JSON.parse(sessionStorage.getItem('newStudent'));
-        let enrolledStudent = [];
-
         // Get the password and confirmed passwords.
         const email = document.querySelector('#email');
         const password = document.querySelector('#password');
         const confirmedPassword = document.querySelector('#confirm-pass');
+        let isAllValid = true;
+
+        let newStudent = JSON.parse(sessionStorage.getItem('newStudent'));
+        let enrolledStudent = [];
 
         // Check if email does not exist.
         if (isEmailExist(email.value)) {
 
             setErrorStyles(email, 'Email does exist.');
+            isAllValid = false;
         }
 
         // Checks if the password and the confirmed password is matched/correct.
@@ -37,13 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             newStudent['studentEmail'] = email.value;
             newStudent['studentPassword'] = password.value;
-        } 
+        }
         else {
 
             setErrorStyles(confirmedPassword, 'Confirmed password does not match. Kindly check it.');
+            isAllValid = false;
         }
-            
-        
+
+
         // Event in confirmed password.
         confirmedPassword.addEventListener('input', () => {
 
@@ -56,17 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
             onInputStyles(email);
         })
 
-        // Storing the new student.
-        if (localStorage.getItem('enrolledStudent') == null || localStorage.getItem('enrolledStudent') == undefined) {
+        if (isAllValid) {
 
-            enrolledStudent = [newStudent];
-            localStorage.setItem('enrolledStudent', JSON.stringify(enrolledStudent));
-        }
-        else {
+            // Storing the new student.
+            if (localStorage.getItem('enrolledStudent') == null || localStorage.getItem('enrolledStudent') == undefined) {
 
-            enrolledStudent = JSON.parse(localStorage.getItem('enrolledStudent'));
-            enrolledStudent.push(newStudent);
-            localStorage.setItem('enrolledStudent', JSON.stringify(enrolledStudent));
+                enrolledStudent = [newStudent];
+                localStorage.setItem('enrolledStudent', JSON.stringify(enrolledStudent));
+            }
+            else {
+
+                enrolledStudent = JSON.parse(localStorage.getItem('enrolledStudent'));
+                enrolledStudent.push(newStudent);
+                localStorage.setItem('enrolledStudent', JSON.stringify(enrolledStudent));
+            }
+            window.location.assign("\/Programming-Practices\/Enrollment System Project\/HTML Files\/sign-up.html");
         }
     })
 });
@@ -84,11 +91,11 @@ function isEmailExist(thisEmail) {
 
         for (let student of enrolledStudent) {
 
-        if (student['studentEmail'] === String(thisEmail)) 
-            return true;
+            if (student['studentEmail'] === String(thisEmail))
+                return true;
         }
     }
-    
+
     return false;
 }
 
@@ -109,4 +116,11 @@ function onInputStyles(element) {
     element.style.borderBottom = '2px solid #657786';
     element.nextElementSibling.style.animation = 'errorMessageDisappearing 300ms';
     element.nextElementSibling.style.display = 'none';
+}
+
+function clearAll() {
+
+    document.querySelector('#email').value = ''; 
+    document.querySelector('#password').value = ''; 
+    document.querySelector('#confirm-pass').value = ''; 
 }
